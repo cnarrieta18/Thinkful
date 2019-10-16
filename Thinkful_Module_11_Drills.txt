@@ -5,7 +5,8 @@ https://www.essentialsql.com/what-is-the-difference-between-a-primary-key-and-a-
 1. Draw a schema of the relationship between the people, salaries, and hof_inducted tables. There are several online database schema drawers that you can use for free, including draw.io, which we recommend. We discuss the basics of how to use draw.io at the end of this checkpoint.
 Label the primary and foreign keys. (Note that a field can be a primary key to one table and a foreign key to another.) 		
 
-	a. What are the parent and child tables? 
+	a. What are the parent and child tables?
+ 
 
 	b. Are these one-to-one, one-to-many, or many-to-many relationships? 
 		The parent table is people; the child tables are salaries and hof_inducted.
