@@ -1,0 +1,15 @@
+Look back to the potential experiments in the previous assignment. For one of those experiments, write up the essential points of a research proposal for an improved version of that experiment.
+
+Experiment: The Sith Lords are concerned that their recruiting slogan, "Give In to Your Anger," isn't very effective. Darth Vader develops an alternative slogan, "Together We Can Rule the Galaxy." They compare the slogans on two groups of 50 captured droids each. In one group, Emperor Palpatine delivers the "Anger" slogan. In the other, Darth Vader presents the "Together" slogan. 20 droids convert to the Dark Side after hearing Palpatine's slogan, while only 5 droids convert after hearing Vader's. The Sith's data scientist concludes that "Anger" is a more effective slogan and should continue to be used. 
+
+[Problem]
+	Define: Does the Sith recruiting slogan need change?
+	Justify: The Sith Lords aim to completely rule the world.  They cannot risk the rise of a new Jedi order.  By having a more effective slogan, they reduce the number of the population that might join the light side.
+	Review: The Sith Lords are concerned that their recruiting slogan, "Give In to Your Anger," isn't very effective.
+
+[Potential Solution]: "Together We Can Rule the Galaxy." is a better slogan that will recruit more. 
+
+[Test Method]
+	Design: Gather a sample group that represents the population of the galaxy.  Split them to two similar subgroups.  Perform A/B testing to compare original slogan and new slogan.  Have the slogans delivered by the same speaker from a recording in the same room at the same time.	
+	Analysis: Compare the number of new recruits between the subgroups.  Include breakdown of species conversion rate between subgroups.
+	Benchmarks: If there is more than one standard deviation difference between the subgroups, go with the more effective slogan.  If the difference is within one standard deviation, stick to the original slogan. 
