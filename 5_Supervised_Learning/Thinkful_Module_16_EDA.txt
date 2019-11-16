@@ -1,0 +1,17 @@
+EDA
+
+
+1. What is the goal of EDA (exploratory data analysis)?
+- The goal of EDA is to get to a manageable data set that is free of errors.  The other goal is to understand this data set and get ideas of what truths or observations can be revealed with modeling.
+
+
+2. Suppose that you are given a dataset of customer product reviews for an e-commerce company. Each review is scored as a Likert-style survey item where 1 indicates a negative sentiment about the product and a 5 is positive. These reviews are collected on the company's website. 
+
+a. What problems do you expect to find in the raw data? 
+- There are several issues with the original data.  There may be fraudulent entries either from the company driving up review score or competition hurting a product.  Since the data is self-reported, there may also be varying understanding or standard per individual.  The 1-5 scale may also be confused with a 1-10 scale.
+
+b. If your task is to build features that give information about customer sentiments, how would you approach this task and what kind of methods would you apply to accomplish it? 
+- We can get overall average score for each product; or get frequency of each scores; or sum the sentiments for each product 
+
+c. Try to identify some potentially useful features that you might derive from the raw data. How would you derive them and how would you assess the usefulness of those features?
+- 
