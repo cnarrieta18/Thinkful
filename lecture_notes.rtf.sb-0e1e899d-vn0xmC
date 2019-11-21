@@ -1,0 +1,768 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Italic;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;\red220\green161\blue13;}
+{\*\expandedcolortbl;;\cssrgb\c27059\c27059\c27059;\cssrgb\c89412\c68627\c3922;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid2\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid3\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs24 \cf2 \ul \ulc2 Thinkful
+\f1\b0 \ulnone \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Thinkful: Ask Mentor\
+\
+What\'92s a good time to prepare for our next session?\
+\
+Specialties: Advanced NLP, deep learning, time series, network analysis, big data, economics?\
+\
+is going through the documentation of python libraries a good way of learning about them?  It seems like a lot of new material that can be easily forgotten or become road blocks during the learning process\
+\
+control flow: what else outside if/else and try/except\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Additional resources: NoSQL, JSON\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Pandas and Numpy section\
+	with import\'85.how come importing something like pandas, which is built on numpy, does not automatically import numpy?\
+	why is using lambda for filtering dataframes more robust?\
+		`df[\'91column\'92] _filter_` #returns series boolean\
+		`df[df[\'91column\'92] _filter_]` #returns dataframe where True\
+		`df.loc[(df[\'91column\'92] _filter_), [list of columns]]` #pull specific column with filter\
+so csv is structured and JSON, XML or only semi-structured?\
+\
+JSON\
+		normalizing and requests?\
+\
+io.py\'85i dont want to go down a rabbit hole!\
+		when is open() preferred over pandas read methods?\
+\
+encoding issues. have you had experience with this?\
+\
+Plotting\
+	my plot was able to display without plt.show()?\
+	why does the boxplot example only have fliers at the top?\
+	\'93If all values are within that range, the whiskers will go to the max and min of the variable\'94 ?\
+\
+	how can I access the finance data and just play around with plotting?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Statistics\
+	\
+	bias\'85.what is population value? this is sample v full population\
+	variance is exciting! \
+		how much variables differ from central tendency and from each other\
+		highlights some case/data points are different\'85.good place to start asking \'93why is that?\'94 \
+		the average of the differences between x and mean is 0 (positives and negatives cancel out)\'85this might explain the delta plot in previous hw\
+		why square the difference over just getting absolute value? what is the mathematical advantage?\
+		why does dividing by n underestimate the population?\
+		higher variance means higher error from actual mean\
+			multiple samples will converge on actual/true mean\
+			larger sample size can help with finding mean of high variance populations??\
+	standard deviation\
+		what is it other than square root of variance?\
+			While var. gives you a rough idea of spread, the standard deviation is more concrete, giving you exact distances from the mean?\
+		brief intro of central limit theory?\
+		np.std(df['age'], ddof=1) difference between population std (n) and sample std (n-1)\'85when do we want which one?\
+	standard error\
+		precision of sample mean estimate\
+		aka margin of error\
+	interesting that 50th percentile does not match mean, I guess because it is the median\
+	pandas\
+		describe() and value_counts() for eda\
+\
+Basics Probability\
+	and is *\
+	or is +\
+	independent variables contribute more information since information is not duplicated\
+\
+Evaluating Data Source\
+	how to check bias from online data sources?\
+	what are your practices for checking quality of data?\
+\
+	Firstly if you can quantify the bias, you can 
+\f0\b adjust
+\f1\b0  to it. For example, let's say you were interested in fishing numbers, but only had data from San Francisco for the given year. You can look at other databases and figure out how other cities typically compare to where you have your data and try to impute larger trends.\
+		How?? If you can do that then why not just use all those data?\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 	Permutations & Combinations
+\f1\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \ul 		Permutation\ulnone \
+			order matters\
+			Permutations with repetition: N^r\
+			Permutations without repetition: nPr = N!/(N-r)!\
+\ul 		Combinations\ulnone \
+			order does not matter\
+			nCr = N!/(N-r)!r!\
+\
+Distributions\
+	normal distribution\
+		mean and median are same because concentration is centered\
+			so how about skews\'85are they no longer considered normal?\
+				assymetric prob: the mean is no longer a measure of "central" tendency, as it does not fall in the center, and the standard deviation 				no longer describes how much variance there is.\
+		the area under the graph is 1? this is only after \'93normalizing\'94? wait is that where the word normalizing comes from??\
+		\'93any variable that measures an outcome produced by many small effects acting additively and independently will have a close to normal 			distribution\'94\
+			\'85brain fart here\
+		\'93Lots of common scores (percentiles, z-scores) and statistical tests (t-tests, ANOVAs, bell-curve grading) assume a normal distribution\'94\
+			are theses tests no longer valid outside a normal distribution?\
+		whether or not the test says your data is normal has more to do with how much data you have than the distribution of your data\
+		qq plot\
+	probability mass function v probability density function\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Central Limit Theory\
+	\'93When sampling from a population (of any distribution), as the sample size gets larger the sample means tend to follow a normal probability distribution, clustering around the true population mean.\'94\
+		- well yea, the closer to 100% then the closer to estimating the population stats summary.  but how does this help us deal with unknown distributions???\
+	t-value is the difference in sample mean of two population relative to combined variance\
+		- the difference between means of two different samples of two different populations\
+		- why is combined variance over sample size n and not (n-1)?\
+		- larger t-value means the difference in mean is less likely due to chance\
+		- why does noisy data have smaller difference?\
+		- One way to interpret a t-value is as the number of standard errors worth of space separating the group means. A t-value of 2 would indicate that the means are two standard errors apart?\
+			- the 
+\f2\i standard error
+\f1\i0 , which quantifies uncertainty in the estimate of the sample mean; \'91margin of error\'92\
+	p-value\
+		- probability that the t-value would occur by chance\
+		- low is good, but p-hacking bad\
+		- how likely we get the sample data if the two population means are actually same\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 Capstone1: Analytics not prediction\
+	
+\f0\b goal
+\f1\b0  should be to give us an understanding of your dataset and the behaviors present in it\
+	Requirements: \
+		describe data set\
+			is it bias, incomplete?\
+			Where it\'92s from, background, whats in it. \
+			why is it important or interesting. \
+			summary stats and visualizations of the variables\
+				distributions of the variables\
+		ask and answer analytical questions\
+			how is this different from summary stats above?\
+			specify assumptions\
+			2-3 different types of charts (bar, scatter, line, box, pie, violin)\
+		propose further research\
+			one clear question\
+			what techniques do you want to learn and apply\
+				regression, classification, dimension reduction, cluster\
+	Pick a data set then ask preliminary questions\
+	
+\f0\b do independent research now about the field of data science, or discuss the topic with your mentor, to decide which potential techniques you could use.
+\f1\b0 \
+	 Capstone review:\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl2
+\f3\fs20 \cf2 {\listtext	\uc0\u8226 	}
+\f1\fs24 Did you have any challenges with this data?\
+\ls1\ilvl2
+\f3\fs20 {\listtext	\uc0\u8226 	}
+\f1\fs24 Why did you choose this dataset?\
+\ls1\ilvl2
+\f3\fs20 {\listtext	\uc0\u8226 	}
+\f1\fs24 How did your dataset inform the questions you chose to explore?\
+\ls1\ilvl2
+\f3\fs20 {\listtext	\uc0\u8226 	}
+\f1\fs24 What issues did you run into while analyzing your data?\
+\ls1\ilvl2
+\f3\fs20 {\listtext	\uc0\u8226 	}
+\f1\fs24 Imagine someone sees this visualization out in the wild, separated from your report. What conclusions would you expect them to draw? Is that the conclusion that you 
+\f2\i want
+\f1\i0  them to draw?\
+\ls1\ilvl2
+\f3\fs20 {\listtext	\uc0\u8226 	}
+\f1\fs24 How could you make your conclusions more rigorous?\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 		grading concerns:\
+			fully pep8 compliant\
+			The student uses summary stats and statistical tests to compliment their visuals in a clear and compelling way.\
+			
+\f0\b accommodates any relevant outside information or assumptions
+\f1\b0 \
+			The student chooses complex questions and then breaks them down to either multiple subquestions or presents different ways of reaching a conclusion and evaluates those merits. The questions also build on each other, leading to robust and engaging conclusions.\
+\
+\
+	Interest Rate:\
+		increasing inflation is followed by increase in interest rate\
+\
+\
+hive (stacks, mapreduce) v spark (seamlessly plugs in with sql) *spark is replacing hadoop?\
+data studio\
+public tableau\
+python, sql, spark, hadoop <<learn these\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://docs.google.com/presentation/d/1OaoBwHVFLCkpaiDdMF8JSsdLunkUJ6eOzpA20iZp6RQ/edit#slide=id.g584fc7861a_0_45"}}{\fldrslt \cf3 https://docs.google.com/presentation/d/1OaoBwHVFLCkpaiDdMF8JSsdLunkUJ6eOzpA20iZp6RQ/edit#slide=id.g584fc7861a_0_45}}\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://docs.google.com/presentation/d/1TltQIUWfo-teyx72qh5c1G3Fq4rI57YeRX-Ai4IC5VY/edit#slide=id.g587fbcb789_0_27"}}{\fldrslt \cf3 https://docs.google.com/presentation/d/1TltQIUWfo-teyx72qh5c1G3Fq4rI57YeRX-Ai4IC5VY/edit#slide=id.g587fbcb789_0_27}}\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://docs.google.com/presentation/d/1HrRvBOefGDK-q-Vz_P48Wd7ir0Jx5BajsiTfd9UttOQ/edit#slide=id.p4"}}{\fldrslt \cf3 https://docs.google.com/presentation/d/1HrRvBOefGDK-q-Vz_P48Wd7ir0Jx5BajsiTfd9UttOQ/edit#slide=id.p4}}\
+\
+google and ibm certification\
+\
+how to set up big data tools\
+set up cybersecurity for data in hadoop\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 8: Networking
+\f1\b0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Perfromance, 10%\
+	Image, 30%\
+	Exposure, 60%\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	location specific tech sources: {\field{\*\fldinst{HYPERLINK "https://docs.google.com/document/d/16qw43Glc1FDwgW1sHRI2941hATmD5ijCYtr6GQyPezE/edit"}}{\fldrslt \cf3 https://docs.google.com/document/d/16qw43Glc1FDwgW1sHRI2941hATmD5ijCYtr6GQyPezE/edit}}\
+	conferences: {\field{\*\fldinst{HYPERLINK "https://docs.google.com/document/d/1UY_kOf0WFEAV_TQD4YsFmCG8oKJRjMegf03PXcT3kNU/edit"}}{\fldrslt \cf3 https://docs.google.com/document/d/1UY_kOf0WFEAV_TQD4YsFmCG8oKJRjMegf03PXcT3kNU/edit}}\
+	hackathon events: {\field{\*\fldinst{HYPERLINK "https://www.hackathon.io/events"}}{\fldrslt \cf3 https://www.hackathon.io/events}}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Elevator pitch PRACTICE!\
+		Who are you?\
+		What do you do?\
+		Why would you be the perfect candidate?\
+			What skills do you have?\
+			What makes you different?\
+			Where do you want to take your career?\
+		call to action; ask a question\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 		List of 10 statements to share: \
+			I have a real estate license and have completed an MIT course on Commercial Real Estate Investment \
+			I am set to complete an Data Science program in a few months; so far I have picked up SQL, Python, and Python libraries\
+			I am finding a way to merge real estate investment and data science; I am drawn to doing analysis of accounting finances from my business minor\
+			My background is 5 years in structural engineering, producing designs for foundation work throughout the bay area			\
+			I got my engineering license and decided to do independent contracting while I tried to figure out what I really wanted to do\
+			As an engineer, in addition to all the analysis, I have to coordinate well with the contractors, owner, and architect of a project\
+			Logistics and design costs are also important \
+			Before I moved to the US, I grew up around my parents\'92 construction business in the Philippines\
+			I have done leadership roles\
+			I am open to relocating\
+			I am trying to build experience/context\
+\
+	\
+		ex 	\'93Hi, I\'92m Chris and I am a Data Scientist with 4 years experience in analysis and design of structural elements.\'94\
+			\'93In my previous role\'85\'94\
+				worked on multiple project designs\
+				collaborated with team\
+				plan/mitigate/design/address\
+			\'93I was more interested in project financing\
+				sustainable and profitable accounting/investment\
+			\'93i started looking at data science\'94 career change\
+			\'93If you have some free time, I would like to reach out on Linkedin and set up for chat and coffee or drinks\'94\
+				\'93what brought you to this networking event?\'94\
+\
+			Hi, I\'92m Chris.  And I like to say I am data curious.  I am completing a Data Science program right now; and so far I have learned SQL, Python, and a few required Python libraries (ie Pandas, Numpy, Matplotlib, and a bit of sklearn).  I would really like to better understand the financial markets and, to be blunt, exploit that using the data we have been collecting.  My background is 5 years in structural engineering where understanding basic physics allows us to manipulate forces and build beautiful structures.  In engineering, there are a lot of iterations running analysis, and I\'92m very comfortable with Excel thanks to that, but there is also heavy emphasis on collaboration and creative solutions.  That is challenging and fun, but I realized I didn\'92t want to focus my energy on individual buildings          \
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 9: SQL Foundation 1
+\f1\b0 \
+\
+	master p_w: wh000zahevian3\
+	thinkful_dataanalytics server\
+		user: dsbc_student\
+		p: 7*.8G9QH21\
+\
+	Structured Query Language, since 1970\
+		for database queries\
+			way to talk to database\
+\
+	PostgreSQL\
+		database management system\
+\
+	RDBMS, Relational Database Management System\
+		ie MySQL, ORACLE, Microsoft Access, PostgreSQL, SQLite\
+		What is relational databse
+\f0\b ??
+\f1\b0 \
+			roughly: database where relationship of data matters\
+\
+	Fields (columns)\
+		naming convention: must start with letter or underscore _. <= 63 characters. relevant to data in column\
+		must specify column type (ie float, int, char, bool, date, time, etc)\
+			partly because back then there was limited memory\
+			now it\'92s to make entries predictable/logical\
+	Records (rows)\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	pgAdmin, a graphical database management tool   \
+		server is where the database is stored\
+			database > schema
+\f0\b ??
+\f1\b0  > tables\
+				schema: names and data types of column\
+				column > primary key
+\f0\b ??
+\f1\b0 \
+				too many rows\'85but we can get a sample view to be more familiar\
+		query tool\
+			where you input SQL syntax\
+			with 2 statements\
+				both statements actually get executed\
+				but last statement only will output\
+				unless earlier statement is highlighted and ran\
+			query history\
+				as log and reenter older queries\
+			
+\f0\b I CANT SAVE\'85folders are locked?
+\f1\b0 \
+				save in new folder for now\
+			specify as .sql\
+			output can be saved as .csv or .xlsx\
+				Excel can open .csv but limited\
+			* writing, modifying, and deleting are saved for later; focus now is just retrieving \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	clauses:\
+	SELECT		specify fields (columns)\
+	FROM		specify table\
+	WHERE		criteria\
+	ORDER BY	how to sort\
+	GROUPY BY	how to aggregate\
+	HAVING		criteria of aggregate\
+	LIMIT		how many records to return\
+	;			escape character; end statement\
+	\'97			comments\
+\
+		SELECT\
+			can create temporary new fields (ie \'93existing column\'94 * \'93another existing column\'94)\
+			aliasing: temporary name for column (ie SELECT title AS film_title)\
+				AS is not required but recommended for legibility\
+			ROUND(field and operation, zero digits)\
+			concatenate\
+				1) CONCAT(field, \'92string\'92, field2) AS new_field\
+				2) field || \'91string\'92 || field2 AS new_field\
+			INITCAP(field): capitalize first letter\
+			COUNT\
+				does not consider NULL entries when aggregating individual fields\
+				to count NULLS\
+					SELECT COUNT(*) FROM table WHERE field IS NULL\
+			DISTINCT\
+\
+		WHERE\
+			*case sensitive for quoted names\
+			can filter for entries based on fields not included in SELECT\
+			comparison (=, <, >, <>, !=) and logical (AND, OR, NOT, BETWEEN, IN, NOT)\
+				field BETWEEN bottom_range AND top_range\
+				IN(list of crieterias)\
+				field IS NULL\
+				LIKE + \'91abc%\'92 or \'91_abc\'92\
+					ILIKE for case \ul insensitive\
+\ulnone 		\
+		ORDER BY\
+			ASC: sorts ascending by default\
+			DESC\
+			NULLFS FIRST/LAST\
+			*filter then sort\
+			id is for index\
+			can use column order number instead of specifying name\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 10: SQL Foundation 2 - more on aggregates\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b0 \cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	continuing\'85 DISTINCT\
+		cannot perform on two fields\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	GROUP BY\
+		combining aggregate and non-aggregate\
+		field used must also be specified in SELECT clause\
+		to get counts of distinct entries in a field\
+			SELECT field, COUNT(*) FROM table GROUP BY field;\
+\
+	more aggregation w/ AVG, SUM, MAX, and MIN\
+		AVG\
+			also does not include NULLS\
+			good to use ROUND() for logical output and COUNT() to determine for average\
+		good idea to alias this for legible columns\
+		similar as PivotTables in Excel\
+	\
+	NULLIF(x, y) replaces x as NULL if x = y; good when possibly dividing by 0\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	HAVING\
+		some database management system does not support aliasing for HAVING; may need to repeat aggregation from SELECT\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 11: SQL Foundation 3 - JOIN
+\f1\b0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	one-to-many relationship (most common)\
+		multiples matches in table2 per unique records in table1\
+		table2 (child) depends on information from table1 (parent)\
+\
+	one-to-one relationship\
+		no duplicate records on either table\
+		does not guarantee all records exist in both tables\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	many-to-many\
+		typically presented in intermediate table linking an id from table1 and another id from table2\
+		a succession of one-to-many\'92s\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	What is a schema?\
+		a diagram labeling tables, fields (columns), and sometimes field types\
+		
+\f0\b PK: primary key, 
+\f1\b0 \
+			column entries must be unique for each row\
+			no NULLs\
+			just one primary key per table?? but can be a set of one or more columns?			\
+		
+\f0\b FK: foreign key acts as lock to PK
+\f1\b0 \
+			set of one or more columns that refers to primary key from another table\
+			can contain duplicate and/or NULL values\
+			table can have multiple foreign keys\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	INNER JOIN: return records found in both tables\
+		SELECT * FROM table1 INNER JOIN table2 ON {\field{\*\fldinst{HYPERLINK "http://table1.id"}}{\fldrslt \cf3 table1.id}} = {\field{\*\fldinst{HYPERLINK "http://table2.id"}}{\fldrslt \cf3 table2.id}}\
+\
+	explicit syntax, specify table.field\
+\
+	LEFT OUTER JOIN: returns all of table1 with NULL if no match on table2\
+		remember to select fields from table1 to keep table1 output complete\
+		order for ON does not matter\
+\
+	LEFT vs RIGHT\
+		readability\
+		end removing NULLs depending on which direction \
+\
+	FULL OUTER JOIN\
+		returns all records with NULLS where there\'92s a match on ids\
+		ordering does not matter, but table.field selection does\
+\
+	UNION\
+		JOIN works on fields (columns) and UNION works on records (rows)\
+		SELECT * FROM table1 WHERE operation UNION SELECT * FROM table2 WHERE operation ORDER BY field\
+		UNION ALL to include duplicates\
+\
+	Subqueries\
+		for doing operations based on another result\
+		use space or tab??\
+		wrapped inside parentheses: WHERE field operator (SELECT field FROM table))\
+		\
+		conditional subqueries\'85\
+			ANY \'85when there are multiple outputs\
+			ALL \'85how is this different from getting the max
+\f0\b ?? 
+\f1\b0 might be faster\
+				SELECT empno, ename, job, sal FROM emp WHERE sal > ALL  (SELECT sal  FROM emp  WHERE job = 'CLERK' );\
+				SELECT empno, ename, job, sal FROM emp WHERE sal > (SELECT MAX(sal)  FROM emp  WHERE job = 'CLERK' );\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	CASE \'85.similar to IF/THEN\
+		can be used with AVG and splitting records to get percentage\
+\
+	COMMON TABLE EXPRESSIONS (CTE)\
+		temporary table before main 	query\
+		able to carry field aliases to main query\
+		more robust for multiple aggregations\
+		WITH table_name AS (SELECT field FROM table) SELECT field2 FROM table_name\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 recap SQL\
+WITH\
+SELECT\
+	DISTINCT, ROUND, CONCAT, COUNT, AS\
+	AVG, SUM, MAX, MIN, NULLIF\
+	JOIN\
+	CASE-WHEN-THEN-END\
+FROM\
+WHERE\
+	BETWEEN-AND, IN, LIKE\
+	subqueries\
+		ANY, ALL\
+UNION\
+GROUP BY\
+HAVING\
+ORDER BY *does not read aliases; use column number instead of name\
+LIMIT\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	SQL on Python using SQLAlchemy and psycorg2 libraries\
+		what is the benefit of this over Pandas
+\f0\b ??
+\f1\b0 \
+			not needing to load the full table, save on memory\
+		execute(\'91query\'92) creates a ResultProxy object\
+			has methods and properties to process data from query\
+			a set of RowProxys: table records in tuple form\
+			can use a variable for query input (eg sql = \'91\'92\'92 query \'91\'92\'92)\
+\
+		from sqlalchemy import create_engine\
+		# Database credentials\
+		postgres_user = 'dsbc_student'\
+		postgres_pw = '7*.8G9QH21'\
+		postgres_host = '142.93.121.174'\
+		postgres_port = '5432'\
+		postgres_db = 'dvdrentals'\
+		# use the credentials to start a connection\
+		engine = create_engine('postgresql://\{\}:\{\}@\{\}:\{\}/\{\}'.format(\
+		    postgres_user, postgres_pw, postgres_host, postgres_port, postgres_db))\
+		# Execute the SQL statement again\
+		sql = \'91\'92\'92\
+		select * from film limit 10\
+		\'91\'92\'92\
+		film = engine.execute(sql)\
+		# dispose the connection\
+		engine.dispose()\
+		# use fetchall() to get a list of rows from the results.\
+		rows = film.fetchall()\
+		# the numeric value into a list of raw numbers\
+		movie_title = [x[\'91title\'92] for x in rows]\
+		# now process the list of rows\
+		for row in rows:\
+			print(row)\
+		# get a list of the keys (column names) \
+		film.keys()\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 13: Visualization and Exploration
+\f1\b0 \
+\
+	Bar Plots\
+		issues: inneficient (ie has to start at y = 0); can be misleading (errors are perceived relative to height of bar)\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Text manipulation\
+		`.isdigit()`					# extract category from string	\
+		`.isalpha()`\
+		`.isnumeric()`\
+		`.isspace()`\
+		`.isalnum()`\
+		\
+		`df[\'91column\'92].apply(function)`			# apply function to individual element in a series\
+		`df[\'91column\'92].apply(lambda x: operation)`\
+		\
+		Regex practice: {\field{\*\fldinst{HYPERLINK "https://regexr.com/"}}{\fldrslt \cf3 https://regexr.com/}}\
+	\
+	\'93Missingness\'94 indicator\
+		anonymous/random values (eg not within reasonable range or wrong type entry)\
+		fake answers (eg entry has pattern or is abnormal or suspicious response time )\
+\
+	Missing Data\
+		MCAR (missing completely at random)\
+			completely random; ok to drop as long as not a large percentage of entry\
+		MAR (missing at random)\
+			can be dropped as long as variable that explains the missing values is kept\
+		MNAR (missing not at random)\
+			WARNING: biased sample\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Imputation\
+		using mean, median, or mode\
+			keeps central tendency but reduces variance and correlation(?)\
+			
+\f0\b need to review
+\f1\b0  the lecture sample notebook\
+		{\field{\*\fldinst{HYPERLINK "https://www.analyticsvidhya.com/blog/2014/09/data-munging-python-using-pandas-baby-steps-python/"}}{\fldrslt \cf3 https://www.analyticsvidhya.com/blog/2014/09/data-munging-python-using-pandas-baby-steps-python/}}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \ul \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \ulnone 	Encoding\
+		`file -I (name of file)`	# to find encoding from command line\
+		{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16"}}{\fldrslt \cf3 https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16}}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Pandas Methods\
+		`sum(df[\'91column\'92].isnull())`\
+		`df.drop([\'91column\'92], axis=(0 or 1))`\
+		`df[\'91column\'92].fillna(np.mean(df[\'91fields\'92]))`\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 Module 14: Experimental Design and A/B Testing
+\f1\b0 \
+\
+	{\field{\*\fldinst{HYPERLINK "https://cirt.gcu.edu/research/developmentresources/research_ready/experimental/design_types"}}{\fldrslt \cf3 https://cirt.gcu.edu/research/developmentresources/research_ready/experimental/design_types}}\
+\
+	A/B Testing\
+		two versions of an object is tested for yielding more towards desired outcome\
+		control version and test version (aka treatment)\
+		sample that represents the population is randomly split\
+			the subgroups should be similar to avoid bias\
+			easy to split with continuous and easily randomizable event (eg emails)\
+			more challenging with \'93all on\'94 and \'93all off\'94 scenarios that may need to account for different effects not due to A/B \
+		hypothesis and outcome that is measurable \
+			key_metric: should be close to business goal and reliably measured\
+				passive recording is better; self reported is not reliable\
+				consider complete effect such as time\
+		other variables for evaluating the difference between the test groups and other effect of change\
+\
+	Simpson\'92s paradox (aka lurking variable problem)\
+		average of a group is different from the average of the individual subgroups\
+		
+\f0\b lesson
+\f1\b0 : pay attention to how groups differ from each other before getting average across\
+		?? if average of different size groups yield illogical results\'85how does sampling represent the actual population ??\
+		{\field{\*\fldinst{HYPERLINK "http://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf"}}{\fldrslt \cf3 http://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf}}\
+\
+	Bias\
+		something that makes sample not reflect population\
+		from \
+			1. sampling procedure \
+			2. the testers (blatant or obvious; avoid by having tester not have expectation)\
+			3. context (environment) of study \
+			4. assignment to conditions (splitting groups)\
+		A/A testing can be used to test for bias; limitation is cannot detect sampling bias\
+			also used to define thresholds on difference with A/B\
+		{\field{\*\fldinst{HYPERLINK "https://callingbullshit.org/"}}{\fldrslt \cf3 https://callingbullshit.org/}}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Research Proposal\
+		The problem: define, justify, and review current understanding\
+		The potential solution: proposed hypothesis\
+		The test method: design, analysis, benchmarks (consider tresholds) \
+		*be mindful of problem and design alignment, using comparable benchmarks, false positives/random chance effects\
+		presents and maintains standard\
+		{\field{\*\fldinst{HYPERLINK "https://searchbusinessanalytics.techtarget.com/feature/How-to-evaluate-the-viability-of-a-data-mining-project"}}{\fldrslt \cf3 https://searchbusinessanalytics.techtarget.com/feature/How-to-evaluate-the-viability-of-a-data-mining-project}}\
+		{\field{\*\fldinst{HYPERLINK "https://www.ibmbigdatahub.com/blog/delicate-art-data-science-project-prioritization-and-triage"}}{\fldrslt \cf3 https://www.ibmbigdatahub.com/blog/delicate-art-data-science-project-prioritization-and-triage}}\
+			consider availability of metrics and its reliability, and volatility or changing business needs that invalidate results\
+			consider alternative (easier, more accessible) methods\
+			small desired effects may be lost in the errors\
+	\
+	Evaluating A/B test\
+		need:	mean, summary of central tendencies\
+				standard deviation, amount of variability\
+				N, size of groups\
+\
+		std and N gives context to mean\
+			higher noise (std) requires larger difference to be confident of real change not just from noise\
+			larger group size (N) provides more accurate mean\
+			*higher variability helped by larger size\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 		t-test: 
+\f2\i are the groups different?
+\f1\i0 \
+			* is the difference between the means meaningful enough? let\'92s consider the variability and size to see how relatively large or small the difference really is\
+			calculates size of difference between two means, with consideration to variability (std) and size (N)\
+			t = delta_mean / sqrt(sum(std^2/N))\
+				why square then square root std? \ul From Central Limit Theorem\'85it decreases bias in estimates\
+\ulnone 				larger t: the difference is less likely due to noise (chance)\
+		\
+		*see notebook for plotting samples\
+\
+	Null Hypothesis and Significance Testing\
+		p-value\
+			how unlikely is the calculated t-value  to occur, to really be sure the difference is notable\
+			\'93probability\'94 value\
+			null-hypothesis testing\
+			significance level = threshold for interesting t-value\
+				\'93p-value < 0.05 is good\'94\
+					2 standard deviations away\
+					how does this theoretically return a false positive
+\f0\b ???
+\f1\b0 \
+		null-hypothesis: opposite of hypothesis; result if expectations are not confirmed (ie no effect)\
+\
+		t-distribution (normally distributed) represents the t-value probabilities for a null hypothesis\
+			p-value is the area under the curve from the t-value outcome of the test\
+				the probability that this t-value and larger (in absolute value) can occur with a null hypothesis\
+				t-value of 0 is p-value of 1; there is 100% chance of getting this t-value and greater in a null hypothesis scenario\
+				look at the two-tails (positive and negative) to be more conservative as this will yield higher p-value\
+\
+		only concludes that there is a good chance that there is some effect (null hypothesis is false), but does not explicitly mean hypothesis is true\
+		A/B tries to limit the variables to only two scenarios\
+			so if null hypothesis is false, it must be due to the effect expected from hypothesis\
+\
+		*can only disprove hypothesis, never actually prove it. just increase the confidence by disproving other hypothesis\
+	\
+	Sample test plan\
+		Have copy of A and B design\
+		Rollout plan: 50/50 is common; sometimes may need to consider gradual to insure against negative consequences (for quick roll back)\
+			for more rigorous check on sample size, try \ul Power calculation\ulnone : probability of rejecting null hypothesis\
+				use t-test formula to determine what effect is detect at different sample sizes\
+		Success and secondary metrics: ie p-value <= 0.05; other metrics to scrutinize other variables that could affect results\
+		infrastructure test: A and B test being administered properly? are they being received as intended? no format issues\
+		random sampling method: eg are samples receiving both A and B?\
+		external conflicts: eg specific time at a specific event; other event influencing sample\
+		sample segmentation: make sure target population is represented accordingly\
+		review and feedback of experiment proposal\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf2 	`import scipy`\
+	`scipy.stats.ttest_ind(pd.Series_group1, pd.Series_group2)`	
+\f1\b0 	#check if significant difference between groups\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	Capstone 2\
+		visuals\
+		question\
+		research proposal\
+			The problem: define, justify, and review current understanding\
+			The potential solution: proposed hypothesis\
+			The test method: design (rollout plan), analysis (evaluation plan), benchmarks (consider tresholds) \
+		*3-5 pages
+\f0\b \ul \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf2 \ulnone \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 	
+\f1\b0 import\
+	pd.set_option\
+	load csv\
+	preview csv\
+	{\field{\*\fldinst{HYPERLINK "http://df.info"}}{\fldrslt \cf3 df.info}}()\
+	standardize column names\
+	check unique limited entries of some columns\
+	drop columns, first iteration\
+	list states of contact and physical address\
+	find contact centers in and outside CA\
+	drop some null entries\
+	fill business name column nulls with dba entries}

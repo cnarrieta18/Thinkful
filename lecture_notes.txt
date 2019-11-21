@@ -1,0 +1,469 @@
+Thinkful
+
+Random
+	hive (stacks, mapreduce) v spark (seamlessly plugs in with sql) *spark is replacing hadoop?
+	data studio
+	public tableau
+	python, sql, spark, hadoop <<learn these
+	https://docs.google.com/presentation/d/1OaoBwHVFLCkpaiDdMF8JSsdLunkUJ6eOzpA20iZp6RQ/edit#slide=id.g584fc7861a_0_45
+	https://docs.google.com/presentation/d/1TltQIUWfo-teyx72qh5c1G3Fq4rI57YeRX-Ai4IC5VY/edit#slide=id.g587fbcb789_0_27
+	https://docs.google.com/presentation/d/1HrRvBOefGDK-q-Vz_P48Wd7ir0Jx5BajsiTfd9UttOQ/edit#slide=id.p4
+
+	google and ibm certification
+
+	how to set up big data tools
+	set up cybersecurity for data in hadoop
+
+
+Module 8: Networking
+
+	Perfromance, 10%
+	Image, 30%
+	Exposure, 60%
+
+	location specific tech sources: https://docs.google.com/document/d/16qw43Glc1FDwgW1sHRI2941hATmD5ijCYtr6GQyPezE/edit
+	conferences: https://docs.google.com/document/d/1UY_kOf0WFEAV_TQD4YsFmCG8oKJRjMegf03PXcT3kNU/edit
+	hackathon events: https://www.hackathon.io/events
+
+	Elevator pitch PRACTICE!
+		Who are you?
+		What do you do?
+		Why would you be the perfect candidate?
+			What skills do you have?
+			What makes you different?
+			Where do you want to take your career?
+		call to action; ask a question
+
+		List of 10 statements to share: 
+			I have a real estate license and have completed an MIT course on Commercial Real Estate Investment 
+			I am set to complete an Data Science program in a few months; so far I have picked up SQL, Python, and Python libraries
+			I am finding a way to merge real estate investment and data science; I am drawn to doing analysis of accounting finances from my business minor
+			My background is 5 years in structural engineering, producing designs for foundation work throughout the bay area			
+			I got my engineering license and decided to do independent contracting while I tried to figure out what I really wanted to do
+			As an engineer, in addition to all the analysis, I have to coordinate well with the contractors, owner, and architect of a project
+			Logistics and design costs are also important 
+			Before I moved to the US, I grew up around my parents’ construction business in the Philippines
+			I have done leadership roles
+			I am open to relocating
+			I am trying to build experience/context
+
+	
+		ex 	“Hi, I’m Chris and I am a Data Scientist with 4 years experience in analysis and design of structural elements.”
+			“In my previous role…”
+				worked on multiple project designs
+				collaborated with team
+				plan/mitigate/design/address
+			“I was more interested in project financing
+				sustainable and profitable accounting/investment
+			“i started looking at data science” career change
+			“If you have some free time, I would like to reach out on Linkedin and set up for chat and coffee or drinks”
+				“what brought you to this networking event?”
+
+			Hi, I’m Chris.  And I like to say I am data curious.  I am completing a Data Science program right now; and so far I have learned SQL, Python, and a few required Python libraries (ie Pandas, Numpy, Matplotlib, and a bit of sklearn).  I would really like to better understand the financial markets and, to be blunt, exploit that using the data we have been collecting.  My background is 5 years in structural engineering where understanding basic physics allows us to manipulate forces and build beautiful structures.  In engineering, there are a lot of iterations running analysis, and I’m very comfortable with Excel thanks to that, but there is also heavy emphasis on collaboration and creative solutions.  That is challenging and fun, but I realized I didn’t want to focus my energy on individual buildings          
+
+
+Module 9: SQL Foundation 1
+
+	master p_w: wh000zahevian3
+	thinkful_dataanalytics server
+		user: dsbc_student
+		p: 7*.8G9QH21
+
+	Structured Query Language, since 1970
+		for database queries
+			way to talk to database
+
+	PostgreSQL
+		database management system
+
+	RDBMS, Relational Database Management System
+		ie MySQL, ORACLE, Microsoft Access, PostgreSQL, SQLite
+		What is relational databse??
+			roughly: database where relationship of data matters
+
+	Fields (columns)
+		naming convention: must start with letter or underscore _. <= 63 characters. relevant to data in column
+		must specify column type (ie float, int, char, bool, date, time, etc)
+			partly because back then there was limited memory
+			now it’s to make entries predictable/logical
+	Records (rows)
+
+	pgAdmin, a graphical database management tool   
+		server is where the database is stored
+			database > schema?? > tables
+				schema: names and data types of column
+				column > primary key??
+				too many rows…but we can get a sample view to be more familiar
+		query tool
+			where you input SQL syntax
+			with 2 statements
+				both statements actually get executed
+				but last statement only will output
+				unless earlier statement is highlighted and ran
+			query history
+				as log and reenter older queries
+			I CANT SAVE…folders are locked?
+				save in new folder for now
+			specify as .sql
+			output can be saved as .csv or .xlsx
+				Excel can open .csv but limited
+			* writing, modifying, and deleting are saved for later; focus now is just retrieving 
+
+	clauses:
+	SELECT		specify fields (columns)
+	FROM		specify table
+	WHERE		criteria
+	ORDER BY	how to sort
+	GROUPY BY	how to aggregate
+	HAVING		criteria of aggregate
+	LIMIT		how many records to return
+	;			escape character; end statement
+	—			comments
+
+		SELECT
+			can create temporary new fields (ie “existing column” * “another existing column”)
+			aliasing: temporary name for column (ie SELECT title AS film_title)
+				AS is not required but recommended for legibility
+			ROUND(field and operation, zero digits)
+			concatenate
+				1) CONCAT(field, ’string’, field2) AS new_field
+				2) field || ‘string’ || field2 AS new_field
+			INITCAP(field): capitalize first letter
+			COUNT
+				does not consider NULL entries when aggregating individual fields
+				to count NULLS
+					SELECT COUNT(*) FROM table WHERE field IS NULL
+			DISTINCT
+
+		WHERE
+			*case sensitive for quoted names
+			can filter for entries based on fields not included in SELECT
+			comparison (=, <, >, <>, !=) and logical (AND, OR, NOT, BETWEEN, IN, NOT)
+				field BETWEEN bottom_range AND top_range
+				IN(list of crieterias)
+				field IS NULL
+				LIKE + ‘abc%’ or ‘_abc’
+					ILIKE for case insensitive
+		
+		ORDER BY
+			ASC: sorts ascending by default
+			DESC
+			NULLFS FIRST/LAST
+			*filter then sort
+			id is for index
+			can use column order number instead of specifying name
+
+Module 10: SQL Foundation 2 - more on aggregates
+
+	continuing… DISTINCT
+		cannot perform on two fields
+
+	GROUP BY
+		combining aggregate and non-aggregate
+		field used must also be specified in SELECT clause
+		to get counts of distinct entries in a field
+			SELECT field, COUNT(*) FROM table GROUP BY field;
+
+	more aggregation w/ AVG, SUM, MAX, and MIN
+		AVG
+			also does not include NULLS
+			good to use ROUND() for logical output and COUNT() to determine for average
+		good idea to alias this for legible columns
+		similar as PivotTables in Excel
+	
+	NULLIF(x, y) replaces x as NULL if x = y; good when possibly dividing by 0
+
+	HAVING
+		some database management system does not support aliasing for HAVING; may need to repeat aggregation from SELECT
+
+Module 11: SQL Foundation 3 - JOIN
+
+	one-to-many relationship (most common)
+		multiples matches in table2 per unique records in table1
+		table2 (child) depends on information from table1 (parent)
+
+	one-to-one relationship
+		no duplicate records on either table
+		does not guarantee all records exist in both tables
+
+	many-to-many
+		typically presented in intermediate table linking an id from table1 and another id from table2
+		a succession of one-to-many’s
+
+	What is a schema?
+		a diagram labeling tables, fields (columns), and sometimes field types
+		PK: primary key, 
+			column entries must be unique for each row
+			no NULLs
+			just one primary key per table?? but can be a set of one or more columns?			
+		FK: foreign key acts as lock to PK
+			set of one or more columns that refers to primary key from another table
+			can contain duplicate and/or NULL values
+			table can have multiple foreign keys
+
+	INNER JOIN: return records found in both tables
+		SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id
+
+	explicit syntax, specify table.field
+
+	LEFT OUTER JOIN: returns all of table1 with NULL if no match on table2
+		remember to select fields from table1 to keep table1 output complete
+		order for ON does not matter
+
+	LEFT vs RIGHT
+		readability
+		end removing NULLs depending on which direction 
+
+	FULL OUTER JOIN
+		returns all records with NULLS where there’s a match on ids
+		ordering does not matter, but table.field selection does
+
+	UNION
+		JOIN works on fields (columns) and UNION works on records (rows)
+		SELECT * FROM table1 WHERE operation UNION SELECT * FROM table2 WHERE operation ORDER BY field
+		UNION ALL to include duplicates
+
+	Subqueries
+		for doing operations based on another result
+		use space or tab??
+		wrapped inside parentheses: WHERE field operator (SELECT field FROM table))
+		
+		conditional subqueries…
+			ANY …when there are multiple outputs
+			ALL …how is this different from getting the max?? might be faster
+				SELECT empno, ename, job, sal FROM emp WHERE sal > ALL  (SELECT sal  FROM emp  WHERE job = 'CLERK' );
+				SELECT empno, ename, job, sal FROM emp WHERE sal > (SELECT MAX(sal)  FROM emp  WHERE job = 'CLERK' );
+
+	CASE ….similar to IF/THEN
+		can be used with AVG and splitting records to get percentage
+
+	COMMON TABLE EXPRESSIONS (CTE)
+		temporary table before main 	query
+		able to carry field aliases to main query
+		more robust for multiple aggregations
+		WITH table_name AS (SELECT field FROM table) SELECT field2 FROM table_name
+
+!RECAP SQL!
+WITH
+SELECT
+	DISTINCT, ROUND, CONCAT, COUNT, AS
+	AVG, SUM, MAX, MIN, NULLIF
+	JOIN
+	CASE-WHEN-THEN-END
+FROM
+WHERE
+	BETWEEN-AND, IN, LIKE
+	subqueries
+		ANY, ALL
+UNION
+GROUP BY
+HAVING
+ORDER BY *does not read aliases; use column number instead of name
+LIMIT
+
+	SQL on Python using SQLAlchemy and psycorg2 libraries
+		what is the benefit of this over Pandas??
+			not needing to load the full table, save on memory
+		execute(‘query’) creates a ResultProxy object
+			has methods and properties to process data from query
+			a set of RowProxys: table records in tuple form
+			can use a variable for query input (eg sql = ‘’’ query ‘’’)
+
+		from sqlalchemy import create_engine
+		# Database credentials
+		postgres_user = 'dsbc_student'
+		postgres_pw = '7*.8G9QH21'
+		postgres_host = '142.93.121.174'
+		postgres_port = '5432'
+		postgres_db = 'dvdrentals'
+		# use the credentials to start a connection
+		engine = create_engine('postgresql://{}:{}@{}:{}/{}'.format(
+		    postgres_user, postgres_pw, postgres_host, postgres_port, postgres_db))
+		# Execute the SQL statement again
+		sql = ‘’’
+		select * from film limit 10
+		‘’’
+		film = engine.execute(sql)
+		# dispose the connection
+		engine.dispose()
+		# use fetchall() to get a list of rows from the results.
+		rows = film.fetchall()
+		# the numeric value into a list of raw numbers
+		movie_title = [x[‘title’] for x in rows]
+		# now process the list of rows
+		for row in rows:
+			print(row)
+		# get a list of the keys (column names) 
+		film.keys()
+
+Module 13: Visualization and Exploration
+
+	Bar Plots
+		issues: inneficient (ie has to start at y = 0); can be misleading (errors are perceived relative to height of bar)
+
+	Text manipulation
+		`.isdigit()`					# extract category from string	
+		`.isalpha()`
+		`.isnumeric()`
+		`.isspace()`
+		`.isalnum()`
+		
+		`df[‘column’].apply(function)`			# apply function to individual element in a series
+		`df[‘column’].apply(lambda x: operation)`
+		
+		Regex practice: https://regexr.com/
+	
+	“Missingness” indicator
+		anonymous/random values (eg not within reasonable range or wrong type entry)
+		fake answers (eg entry has pattern or is abnormal or suspicious response time )
+
+	Missing Data
+		MCAR (missing completely at random)
+			completely random; ok to drop as long as not a large percentage of entry
+		MAR (missing at random)
+			can be dropped as long as variable that explains the missing values is kept
+		MNAR (missing not at random)
+			WARNING: biased sample
+
+	Imputation
+		using mean, median, or mode
+			keeps central tendency but reduces variance and correlation(?)
+			need to review the lecture sample notebook
+		https://www.analyticsvidhya.com/blog/2014/09/data-munging-python-using-pandas-baby-steps-python/
+
+	Encoding
+		`file -I (name of file)`	# to find encoding from command line
+		https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16
+
+	Pandas Methods
+		`sum(df[‘column’].isnull())`
+		`df.drop([‘column’], axis=(0 or 1))`
+		`df[‘column’].fillna(np.mean(df[‘fields’]))`
+
+Module 14: Experimental Design and A/B Testing
+
+	https://cirt.gcu.edu/research/developmentresources/research_ready/experimental/design_types
+
+	A/B Testing
+		two versions of an object is tested for yielding more towards desired outcome
+		control version and test version (aka treatment)
+		sample that represents the population is randomly split
+			the subgroups should be similar to avoid bias
+			easy to split with continuous and easily randomizable event (eg emails)
+			more challenging with “all on” and “all off” scenarios that may need to account for different effects not due to A/B 
+		hypothesis and outcome that is measurable 
+			key_metric: should be close to business goal and reliably measured
+				passive recording is better; self reported is not reliable
+				consider complete effect such as time
+		other variables for evaluating the difference between the test groups and other effect of change
+
+	Simpson’s paradox (aka lurking variable problem)
+		average of a group is different from the average of the individual subgroups
+		lesson: pay attention to how groups differ from each other before getting average across
+		?? if average of different size groups yield illogical results…how does sampling represent the actual population ??
+		http://ftp.cs.ucla.edu/pub/stat_ser/r414.pdf
+
+	Bias
+		something that makes sample not reflect population
+		from 
+			1. sampling procedure 
+			2. the testers (blatant or obvious; avoid by having tester not have expectation)
+			3. context (environment) of study 
+			4. assignment to conditions (splitting groups)
+		A/A testing can be used to test for bias; limitation is cannot detect sampling bias
+			also used to define thresholds on difference with A/B
+		https://callingbullshit.org/
+
+	Research Proposal
+		The problem: define, justify, and review current understanding
+		The potential solution: proposed hypothesis
+		The test method: design, analysis, benchmarks (consider tresholds) 
+		*be mindful of problem and design alignment, using comparable benchmarks, false positives/random chance effects
+		presents and maintains standard
+		https://searchbusinessanalytics.techtarget.com/feature/How-to-evaluate-the-viability-of-a-data-mining-project
+		https://www.ibmbigdatahub.com/blog/delicate-art-data-science-project-prioritization-and-triage
+			consider availability of metrics and its reliability, and volatility or changing business needs that invalidate results
+			consider alternative (easier, more accessible) methods
+			small desired effects may be lost in the errors
+	
+	Evaluating A/B test
+		need:	mean, summary of central tendencies
+				standard deviation, amount of variability
+				N, size of groups
+
+		std and N gives context to mean
+			higher noise (std) requires larger difference to be confident of real change not just from noise
+			larger group size (N) provides more accurate mean
+			*higher variability helped by larger size
+
+		t-test: are the groups different?
+			* is the difference between the means meaningful enough? let’s consider the variability and size to see how relatively large or small the difference really is
+			calculates size of difference between two means, with consideration to variability (std) and size (N)
+			t = delta_mean / sqrt(sum(std^2/N))
+				why square then square root std? From Central Limit Theorem…it decreases bias in estimates
+				larger t: the difference is less likely due to noise (chance)
+		
+		*see notebook for plotting samples
+
+	Null Hypothesis and Significance Testing
+		p-value
+			how unlikely is the calculated t-value  to occur, to really be sure the difference is notable
+			“probability” value
+			null-hypothesis testing
+			significance level = threshold for interesting t-value
+				“p-value < 0.05 is good”
+					2 standard deviations away
+					how does this theoretically return a false positive???
+		null-hypothesis: opposite of hypothesis; result if expectations are not confirmed (ie no effect)
+
+		t-distribution (normally distributed) represents the t-value probabilities for a null hypothesis
+			p-value is the area under the curve from the t-value outcome of the test
+				the probability that this t-value and larger (in absolute value) can occur with a null hypothesis
+				t-value of 0 is p-value of 1; there is 100% chance of getting this t-value and greater in a null hypothesis scenario
+				look at the two-tails (positive and negative) to be more conservative as this will yield higher p-value
+
+		only concludes that there is a good chance that there is some effect (null hypothesis is false), but does not explicitly mean hypothesis is true
+		A/B tries to limit the variables to only two scenarios
+			so if null hypothesis is false, it must be due to the effect expected from hypothesis
+
+		*can only disprove hypothesis, never actually prove it. just increase the confidence by disproving other hypothesis
+	
+	Sample test plan
+		Have copy of A and B design
+		Rollout plan: 50/50 is common; sometimes may need to consider gradual to insure against negative consequences (for quick roll back)
+			for more rigorous check on sample size, try Power calculation: probability of rejecting null hypothesis
+				use t-test formula to determine what effect is detect at different sample sizes
+		Success and secondary metrics: ie p-value <= 0.05; other metrics to scrutinize other variables that could affect results
+		infrastructure test: A and B test being administered properly? are they being received as intended? no format issues
+		random sampling method: eg are samples receiving both A and B?
+		external conflicts: eg specific time at a specific event; other event influencing sample
+		sample segmentation: make sure target population is represented accordingly
+		review and feedback of experiment proposal
+
+	`import scipy`
+	`scipy.stats.ttest_ind(pd.Series_group1, pd.Series_group2)`		#check if significant difference between groups
+
+	Capstone 2
+		visuals
+		question
+		research proposal
+			The problem: define, justify, and review current understanding
+			The potential solution: proposed hypothesis
+			The test method: design (rollout plan), analysis (evaluation plan), benchmarks (consider tresholds) 
+		*3-5 pages
+
+		Order:
+		import
+		pd.set_option
+		load csv
+		preview csv
+		df.info()
+		standardize column names
+		check unique limited entries of some columns
+		drop columns, first iteration
+		list states of contact and physical address
+		find contact centers in and outside CA
+		drop some null entries
+		fill business name column nulls with dba entries
+
+MODULE 16: 

@@ -1,0 +1,10 @@
+1. Consider the advantages and disadvantages of treating the Rank variable as categorical. Discuss your arguments with your mentor.  -Categorical does not measure distance, which seems appropriate since the top channel does not necessarily mean twice as popular as the top 2 channel.  Disadvantage is treating 5000 unique entries as categories.
+
+2. What are the types of the following variables?
+        Age: can be (ratio?) continuous or ordinal categorical
+        Salary: can be ratio continuous or ordinal categorical
+        Revenue: can be ratio continuous or ordinal categorical
+        Customer type: nominal categorical
+        Stock price: interval continuous or ordinal categorical
+
+solutions provided: https://github.com/Thinkful-Ed/data-201-assignment-solutions/blob/master/model_prep_variable_types/solution.ipynb
